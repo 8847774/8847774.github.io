@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JAN | Handmade silver jewellery with green moissanite</title>
+<meta name="description" content="Handmade silver jewellery set with green moissanite. Message us for prices and custom orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0f2a22;      /* emerald night */
+  --moss:#1d5a45;      /* gem green */
+  --mint:#9fe3c2;      /* sparkle */
+  --silver:#d9dedb;    /* sterling */
+  --paper:#f6f8f7;     /* page */
+  --ink:#16211c;       /* text */
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{background:var(--deep);color:var(--silver);padding:28px 0 88px;overflow:hidden}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:72px}
+nav .logo{font-family:"Cormorant Garamond",serif;font-size:30px;letter-spacing:.3em;font-weight:600;color:#fff;text-decoration:none}
+nav div a{margin-left:22px;text-decoration:none;font-size:15px}
+nav div a:hover{color:var(--mint)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(44px,7vw,84px);color:#fff;margin-bottom:20px}
+.hero p{max-width:46ch;font-size:19px;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;background:var(--mint);color:var(--deep);font-weight:500;text-decoration:none;transition:background .2s}
+.btn:hover{background:#fff}
+.btn.ghost{background:transparent;color:var(--silver);border:1px solid var(--silver);margin-left:10px}
+.btn.ghost:hover{background:var(--silver);color:var(--deep)}
+
+/* The one memorable element: a faceted green gem */
+.gem{width:min(320px,70vw);aspect-ratio:1;margin:0 auto;
+  clip-path:polygon(30% 4%,70% 4%,96% 30%,96% 70%,70% 96%,30% 96%,4% 70%,4% 30%);
+  background:conic-gradient(from 20deg,#2fa57a,#0f4a37,#7be0b4,#14503c,#b8f5d8,#1d6a50,#2fa57a);
+  animation:glint 6s ease-in-out infinite alternate}
+@keyframes glint{from{filter:brightness(.9)}to{filter:brightness(1.2)}}
+@media (prefers-reduced-motion:reduce){.gem{animation:none}html{scroll-behavior:auto}}
+
+/* Sections */
+section{padding:80px 0}
+h2{font-size:clamp(32px,5vw,48px);margin-bottom:14px}
+.lead{max-width:56ch;margin-bottom:44px;color:#43524b}
+
+/* Collection */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.piece img,.piece .ph{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--silver)}
+.ph{display:grid;place-items:center;color:var(--moss);font-size:14px;background:linear-gradient(135deg,#e3ebe7,#c9d6d0)}
+.piece h3{font-size:26px;margin:14px 0 4px}
+.piece .spec{font-size:15px;color:#43524b;margin-bottom:12px}
+.piece a{font-weight:500;color:var(--moss)}
+
+/* About */
+.about{background:#e9efec}
+.about p{max-width:60ch;margin-bottom:14px}
+
+/* Contact */
+.contact{background:var(--deep);color:var(--silver);text-align:center}
+.contact h2{color:#fff}
+.contact p{max-width:48ch;margin:0 auto 28px}
+footer{background:var(--deep);color:#8aa398;text-align:center;font-size:14px;padding:0 0 32px}
+
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr}
+  .gem{order:-1;width:200px}
+  nav{margin-bottom:40px}
+  nav div a{margin-left:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">JAN</a>
+      <div><a href="#collection">Collection</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <h1>Green moissanite, set by hand in silver.</h1>
+        <p>JAN makes one-of-a-kind rings and jewellery around deep green moissanite stones. Message us to ask about a piece or to design your own.</p>
+        <!-- EDIT: replace 923001234567 with your WhatsApp number (country code, no + or spaces) -->
+        <a class="btn" href="https://wa.me/923001234567?text=Hello%20JAN%2C%20I%27d%20like%20to%20ask%20about%20your%20jewellery">Message on WhatsApp</a>
+        <a class="btn ghost" href="#collection">See the collection</a>
+      </div>
+      <div class="gem" role="img" aria-label="Green faceted moissanite gemstone"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="collection">
+  <div class="wrap">
+    <h2>Collection</h2>
+    <p class="lead">Every piece is handmade. Prices are shared by message because stones and settings vary.</p>
+    <div class="grid">
+
+      <!-- To add your photo: replace the <div class="ph"> line with
+           <img src="photos/green-solitaire.jpg" alt="Green moissanite solitaire ring"> -->
+      <article class="piece">
+        <div class="ph">Add your photo</div>
+        <h3>Green solitaire ring</h3>
+        <p class="spec">Green moissanite, Portuguese cut, 2.6 ct, about 8 mm. Sterling silver.</p>
+        <a href="https://wa.me/923001234567?text=Hello%20JAN%2C%20what%20is%20the%20price%20of%20the%20Green%20solitaire%20ring%3F">Ask for price</a>
+      </article>
+
+      <article class="piece">
+        <div class="ph">Add your photo</div>
+        <h3>Piece name</h3>
+        <p class="spec">Stone, cut, carat, size. Metal.</p>
+        <a href="https://wa.me/923001234567?text=Hello%20JAN%2C%20I%27d%20like%20to%20ask%20about%20a%20piece">Ask for price</a>
+      </article>
+
+      <article class="piece">
+        <div class="ph">Add your photo</div>
+        <h3>Piece name</h3>
+        <p class="spec">Stone, cut, carat, size. Metal.</p>
+        <a href="https://wa.me/923001234567?text=Hello%20JAN%2C%20I%27d%20like%20to%20ask%20about%20a%20piece">Ask for price</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About JAN</h2>
+    <!-- EDIT: write this in your own words -->
+    <p>JAN is a jewellery brand focused on green moissanite. Each stone is chosen for its colour and fire, then set by hand in silver.</p>
+    <p>Want something that doesn’t exist yet? Send an idea or a picture and we’ll talk through stone, shape, and setting together.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Ask about a piece</h2>
+    <p>Send a message to get prices, see more photos, or start a custom order.</p>
+    <a class="btn" href="https://wa.me/923001234567?text=Hello%20JAN">WhatsApp</a>
+    <!-- EDIT: confirm your Instagram handle -->
+    <a class="btn ghost" href="https://instagram.com/janmoissanite">Instagram @janmoissanite</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 JAN. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
