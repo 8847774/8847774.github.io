@@ -52,12 +52,18 @@ h2{font-size:clamp(32px,5vw,48px);margin-bottom:14px}
 .lead{max-width:56ch;margin-bottom:44px;color:#43524b}
 
 /* Collection */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
-.piece img,.piece .ph{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--silver)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;align-items:start}
+.piece img{width:100%;height:auto;display:block;background:var(--deep)}
 .ph{display:grid;place-items:center;color:var(--moss);font-size:14px;background:linear-gradient(135deg,#e3ebe7,#c9d6d0)}
 .piece h3{font-size:26px;margin:14px 0 4px}
-.piece .spec{font-size:15px;color:#43524b;margin-bottom:12px}
-.piece a{font-weight:500;color:var(--moss)}
+
+.piece a{font-weight:500;color:var(--moss);margin-right:16px}
+.piece .code{font-size:14px;color:var(--moss);margin-top:14px;font-weight:500}
+.piece dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font-size:15px;color:#43524b;margin:6px 0 12px}
+.piece dt{color:#6a7a73}
+.piece dd{margin:0}
+.piece .setnote{background:#e1f3ea;color:var(--moss);padding:10px 14px;border-radius:6px;font-size:15px;margin:16px 0 12px}
+.piece hr{border:0;border-top:1px solid var(--silver);margin:14px 0}
 
 /* About */
 .about{background:#e9efec}
@@ -88,9 +94,8 @@ footer{background:var(--deep);color:#8aa398;text-align:center;font-size:14px;pad
     <div class="hero-grid">
       <div>
         <h1>Green moissanite, set by hand in silver.</h1>
-        <p>JAN makes one-of-a-kind rings and jewellery around deep green moissanite stones. Message us to ask about a piece or to design your own.</p>
-        <!-- EDIT: replace 923001234567 with your WhatsApp number (country code, no + or spaces) -->
-        <a class="btn" href="https://wa.me/923001234567?text=Hello%20JAN%2C%20I%27d%20like%20to%20ask%20about%20your%20jewellery">Message on WhatsApp</a>
+        <p>JAN brings the work of local artisans to the world: lab-created green moissanite set in 925 sterling silver, an ethical alternative to diamond.</p>
+        <a class="btn wa" data-msg="Hello JAN, I’d like to ask about your jewellery" href="#contact">Message on WhatsApp</a>
         <a class="btn ghost" href="#collection">See the collection</a>
       </div>
       <div class="gem" role="img" aria-label="Green faceted moissanite gemstone"></div>
@@ -105,27 +110,32 @@ footer{background:var(--deep);color:#8aa398;text-align:center;font-size:14px;pad
     <p class="lead">Every piece is handmade. Prices are shared by message because stones and settings vary.</p>
     <div class="grid">
 
-      <!-- To add your photo: replace the <div class="ph"> line with
-           <img src="photos/green-solitaire.jpg" alt="Green moissanite solitaire ring"> -->
       <article class="piece">
-        <div class="ph">Add your photo</div>
-        <h3>Green solitaire ring</h3>
-        <p class="spec">Green moissanite, Portuguese cut, 2.6 ct, about 8 mm. Sterling silver.</p>
-        <a href="https://wa.me/923001234567?text=Hello%20JAN%2C%20what%20is%20the%20price%20of%20the%20Green%20solitaire%20ring%3F">Ask for price</a>
+        <img src="green-solitaire-ring.jpg" width="1200" height="892" loading="lazy" alt="2.6 carat Portuguese-cut green moissanite statement ring in 925 silver">
+        <h3>Portuguese-cut statement ring</h3>
+        <p class="code">JAN001</p>
+        <dl><dt>Stone</dt><dd>Green moissanite, 8.5 mm, 2.6 ct</dd><dt>Cut</dt><dd>Portuguese</dd><dt>Metal</dt><dd>925 sterling silver, 4 g</dd></dl>
+        <a class="wa" data-msg="Hello JAN, what is the price of JAN001 (Portuguese-cut statement ring)?" href="#contact">Ask for price</a>
       </article>
 
       <article class="piece">
-        <div class="ph">Add your photo</div>
-        <h3>Piece name</h3>
-        <p class="spec">Stone, cut, carat, size. Metal.</p>
-        <a href="https://wa.me/923001234567?text=Hello%20JAN%2C%20I%27d%20like%20to%20ask%20about%20a%20piece">Ask for price</a>
+        <img src="green-twist-ring.jpg" width="1200" height="905" loading="lazy" alt="Round green moissanite ring in 925 silver">
+        <h3>Round green ring</h3>
+        <p class="code">JAN002</p>
+        <dl><dt>Stone</dt><dd>Green moissanite, 7.5 mm, 1.70 ct</dd><dt>Cut</dt><dd>Round</dd><dt>Metal</dt><dd>925 sterling silver, 3.75 g</dd></dl>
+        <a class="wa" data-msg="Hello JAN, what is the price of JAN002 (Round green ring)?" href="#contact">Ask for price</a>
       </article>
 
       <article class="piece">
-        <div class="ph">Add your photo</div>
-        <h3>Piece name</h3>
-        <p class="spec">Stone, cut, carat, size. Metal.</p>
-        <a href="https://wa.me/923001234567?text=Hello%20JAN%2C%20I%27d%20like%20to%20ask%20about%20a%20piece">Ask for price</a>
+        <img src="pendant-earring-set.jpg" width="1200" height="1200" loading="lazy" alt="Green moissanite pendant and stud earrings in 925 silver">
+        <h3>Pendant and studs</h3>
+        <p class="code">JAN003 &middot; Statement pendant</p>
+        <dl><dt>Stone</dt><dd>Green moissanite, 10.5 mm, 3.65 ct</dd><dt>Cut</dt><dd>Round</dd><dt>Metal</dt><dd>925 sterling silver, 3.5 g</dd></dl>
+        <hr>
+        <p class="code">JAN004 &middot; Studs</p>
+        <dl><dt>Stone</dt><dd>Green moissanite, 5 mm, 0.45 ct each</dd><dt>Cut</dt><dd>Round</dd><dt>Metal</dt><dd>925 sterling silver, 2 g</dd></dl>
+        <p class="setnote">JAN003 and JAN004 are sold together as a set, at a discounted price.</p>
+        <a class="wa" data-msg="Hello JAN, what is the price of the JAN003 + JAN004 set (pendant and studs)?" href="#contact">Ask for set price</a>
       </article>
 
     </div>
@@ -135,18 +145,17 @@ footer{background:var(--deep);color:#8aa398;text-align:center;font-size:14px;pad
 <section id="about" class="about">
   <div class="wrap">
     <h2>About JAN</h2>
-    <!-- EDIT: write this in your own words -->
-    <p>JAN is a jewellery brand focused on green moissanite. Each stone is chosen for its colour and fire, then set by hand in silver.</p>
-    <p>Want something that doesn’t exist yet? Send an idea or a picture and we’ll talk through stone, shape, and setting together.</p>
+    <p>JAN is a new brand started by Malik Dawood Jan, a gemstone enthusiast. The goal is simple: support local craft and artisans, get their work seen around the world, and build a brand from scratch.</p>
+    <p>We begin with moissanite. It is a lab-created stone, so nothing is mined, and it is widely used as an ethical alternative to diamond. Each piece is set in 925 sterling silver.</p>
+    <p>Prices are shared by message because every stone and setting is different.</p>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
     <h2>Ask about a piece</h2>
-    <p>Send a message to get prices, see more photos, or start a custom order.</p>
-    <a class="btn" href="https://wa.me/923001234567?text=Hello%20JAN">WhatsApp</a>
-    <!-- EDIT: confirm your Instagram handle -->
+    <p>Message us to get prices, see more photos, or start a custom order.</p>
+    <a class="btn wa" data-msg="Hello JAN" href="https://wa.me/">WhatsApp</a>
     <a class="btn ghost" href="https://instagram.com/janmoissanite">Instagram @janmoissanite</a>
   </div>
 </section>
@@ -156,5 +165,12 @@ footer{background:var(--deep);color:#8aa398;text-align:center;font-size:14px;pad
   <div class="wrap">© 2026 JAN. All rights reserved.</div>
 </footer>
 
+<script>
+/* EDIT THIS ONE LINE: your WhatsApp number, country code first, no + or spaces. Pakistan: drop the leading 0 and add 92 */
+var WA_NUMBER = "923318847774";
+document.querySelectorAll("a.wa").forEach(function(a){
+  a.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(a.dataset.msg);
+});
+</script>
 </body>
 </html>
