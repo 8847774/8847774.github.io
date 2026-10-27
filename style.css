@@ -1,9 +1,11 @@
 /* JAN Moissanite. Colours live here: change them once, they update everywhere. */
 :root{
-  --em:#0B2E2A;       /* signature emerald */
-  --em2:#123f39;      /* lighter emerald */
-  --gold:#C9A86A;     /* signature gold */
-  --gold-d:#7d6129;   /* darker gold, readable on ivory */
+  --em:#0A2A1F;       /* forest emerald, close to the logo green (brand ref #0B2E2A) */
+  --em2:#123a2c;      /* lighter emerald */
+  --gold:#D8C9B7;     /* champagne silver, sampled from the logo lettering */
+  --gold-hi:#F1E8DA;  /* logo highlight: hovers */
+  --deep:#031A10;     /* the logo's own background green: footer */
+  --gold-d:#6C5C45;   /* darker champagne, readable on ivory */
   --ivory:#F7F3EA;
   --alt:#EDE6D6;
   --ink:#1c2321;
@@ -43,20 +45,21 @@ section{padding:84px 0}
 .center .sub{margin-left:auto;margin-right:auto}
 
 /* Header */
-header{position:sticky;top:0;z-index:40;background:var(--em);color:#efe9d8;border-bottom:1px solid rgba(201,168,106,.28)}
+header{position:sticky;top:0;z-index:40;background:var(--em);color:#efe9d8;border-bottom:1px solid rgba(216,201,183,.28)}
 .bar{display:flex;align-items:center;justify-content:space-between;min-height:68px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{border-radius:50%}
 .brand div{line-height:1}
 .brand b{display:block;font:600 24px var(--serif);letter-spacing:.3em;color:var(--gold)}
 .brand span{display:block;font-size:9px;letter-spacing:.42em;margin-top:5px}
 nav{display:flex;align-items:center;gap:26px;font-size:15px}
 nav a{text-decoration:none}
-nav a:not(.btn):hover{color:var(--gold)}
+nav a:not(.btn):hover{color:var(--gold-hi)}
 .menu-btn{display:none;background:none;border:1px solid var(--gold);color:var(--gold);padding:8px 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer}
 
 /* Buttons */
 .btn{display:inline-block;padding:13px 26px;border-radius:999px;background:var(--gold);color:var(--em);font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--gold);transition:background .2s,color .2s}
-.btn:hover{background:#e0c78f}
+.btn:hover{background:var(--gold-hi)}
 .btn.line{background:transparent;color:var(--gold)}
 .btn.line:hover{background:var(--gold);color:var(--em)}
 .btn.dark{background:var(--em);color:#fff;border-color:var(--em)}
@@ -67,12 +70,14 @@ nav a:not(.btn):hover{color:var(--gold)}
 /* Hero */
 .hero{padding:64px 0 84px}
 .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
-.hero-img{border:1px solid rgba(201,168,106,.5);padding:8px;width:100%}
+.hero-img{border:1px solid rgba(216,201,183,.5);padding:8px;width:100%}
 
 /* Collection */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px}
 .card{background:#fffdf8;border:1px solid #e3dac4;display:flex;flex-direction:column}
 .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.swap{display:block;position:relative;width:100%;padding:0;border:0;background:none;cursor:pointer}
+.swap span{position:absolute;right:10px;bottom:10px;background:rgba(11,46,42,.88);color:#fff;font-size:12px;letter-spacing:.06em;padding:3px 11px;border-radius:999px}
 .body{padding:22px;display:flex;flex-direction:column;flex:1}
 .code{font-size:13px;letter-spacing:.18em;color:var(--gold-d)}
 .price{font:600 28px var(--serif);color:var(--em);margin-bottom:8px}
@@ -83,18 +88,38 @@ dd{margin:0}
 .note{background:#e7efe9;color:var(--em);padding:9px 13px;font-size:14px;margin-bottom:14px}
 .body .btn{margin-top:auto;align-self:flex-start}
 
+/* Pendant, studs and set */
+.card.wide{grid-column:1/-1;flex-direction:row}
+.card.wide>img{width:40%;aspect-ratio:auto;height:auto;object-fit:cover}
+.sub2{color:var(--mute);margin-bottom:6px}
+.opts{list-style:none;margin:8px 0 0;padding:0}
+.opts li{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 0;border-top:1px solid #e3dac4}
+.opts li.set{background:#efe8db;border:1px solid #bdae92;padding:18px;margin-top:6px}
+.opts h4{font:600 23px var(--serif);line-height:1.15}
+.opts h4 small{font:500 12px var(--sans);letter-spacing:.16em;color:var(--gold-d);margin-left:8px}
+.opts .spec{font-size:14px;color:var(--mute);margin-top:4px}
+.opts .buy{text-align:right;flex:none}
+.opts .price{margin:0 0 8px;font-size:26px}
+.tag{display:inline-block;background:var(--em);color:var(--gold);font-size:11px;letter-spacing:.2em;padding:2px 10px;margin-bottom:6px}
+.save{font-size:14px;color:var(--em);margin-top:4px}
+
 /* Story + details */
 .story,.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.story img{width:100%;max-width:420px;margin:0 auto;border:1px solid rgba(201,168,106,.4)}
+.story img{width:100%;max-width:420px;margin:0 auto}
+.story img.logo-round{border-radius:50%}
 .story p,.split p{margin-bottom:16px;max-width:52ch}
 .split img{max-width:380px;width:100%;margin:0 auto}
 .split ul{margin:0 0 18px 20px}
 .split li{margin-bottom:6px}
 
+.custom{padding:56px 0}
+.custom-grid{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.custom p{max-width:58ch}
+
 /* Contact + footer */
 #cfg-note{margin-top:20px;color:var(--gold)}
 .center .actions{justify-content:center}
-footer{background:#071f1c;color:#b9c5c1;padding:44px 0;text-align:center;font-size:15px}
+footer{background:var(--deep);color:#b9c5c1;padding:44px 0;text-align:center;font-size:15px}
 .foot{display:flex;flex-direction:column;align-items:center;gap:14px}
 footer a{text-decoration:none}
 footer a:hover{color:var(--gold)}
@@ -109,10 +134,14 @@ footer a:hover{color:var(--gold)}
 @media (max-width:760px){
   section{padding:60px 0}
   .menu-btn{display:block}
-  nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--em);flex-direction:column;align-items:flex-start;gap:0;padding:8px 22px 20px;border-bottom:1px solid rgba(201,168,106,.28)}
+  nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--em);flex-direction:column;align-items:flex-start;gap:0;padding:8px 22px 20px;border-bottom:1px solid rgba(216,201,183,.28)}
   nav.open{display:flex}
   nav a{padding:12px 0;width:100%}
   nav .btn{width:auto;margin-top:8px}
   .hero-grid,.story,.split{grid-template-columns:1fr;gap:32px}
+  .card.wide{flex-direction:column}
+  .card.wide>img{width:100%;aspect-ratio:1/1}
+  .opts li{flex-direction:column;align-items:flex-start}
+  .opts .buy{text-align:left}
   .hero{padding-top:36px}
 }
