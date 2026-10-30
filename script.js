@@ -22,7 +22,7 @@ var PRICES = { JAN001: 12000, JAN002: 10000, JAN003: 8500, JAN004: 4500, SET: 12
     else { el.hidden = true; }
   });
 
-  var numberOk = /^\\d{10,15}$/.test(WHATSAPP_NUMBER);
+  var numberOk = /^\d{10,15}$/.test(WHATSAPP_NUMBER);
 
   // Every link with data-enquire becomes a WhatsApp link with a ready-typed message.
   // data-enquire="JAN001 ..." names the product; empty means a general enquiry.
